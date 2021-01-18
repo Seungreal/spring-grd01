@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.sym.service;
 
 import lombok.*;
 import javax.persistence.*;
@@ -11,17 +11,17 @@ import javax.persistence.*;
 public class Manager {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "mgr_num") private Long mgrNum;
+    @Column(name = "mgr_num") private int mgrNum;
     @Column(name = "email") private String email;
     @Column(name = "password") private String password;
     @Column(name = "name") private String name;
-    @Column(name = "profile_image") private String profileImage;
+    @Column(name = "profile_img") private String profileImg;
 
     @Builder
-    private Manager(String email, String password, String name, String profileImage){
+    private Manager(String email, String password, String name, String profileImg){
         this.email = email;
         this.password = password;
         this.name = name;
-        this.profileImage = profileImage;
+        this.profileImg = profileImg;
     }
 }
